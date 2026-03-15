@@ -6,13 +6,8 @@ Smart Privacy Face Blur System – Entry Point
 This is the main script that ties everything together.  It supports two
 modes of operation:
 
-  1. Image mode  – Load a single image, blur faces, display & save.
-  2. Webcam mode – Open the camera, blur faces in real-time.
 
-Usage
------
-  python main.py --mode image --input path/to/photo.jpg
-  python main.py --mode webcam
+
 
 Keyboard Controls (during display)
 -----------------------------------
@@ -40,9 +35,6 @@ EFFECT_BLUR = "Blur"
 EFFECT_PIXEL = "Pixelation"
 
 
-# ──────────────────────────────────────────────────────────────────────────
-# Image Mode
-# ──────────────────────────────────────────────────────────────────────────
 def process_image(image_path):
     """
     Load a single image, detect faces, apply the privacy effect,
@@ -101,9 +93,6 @@ def process_image(image_path):
     cv2.destroyAllWindows()
 
 
-# ──────────────────────────────────────────────────────────────────────────
-# Webcam Mode
-# ──────────────────────────────────────────────────────────────────────────
 def process_webcam():
     """
     Open the default webcam, detect and blur faces in real-time,
@@ -162,9 +151,6 @@ def process_webcam():
     cv2.destroyAllWindows()
 
 
-# ──────────────────────────────────────────────────────────────────────────
-# CLI Argument Parser
-# ──────────────────────────────────────────────────────────────────────────
 def parse_arguments():
     """
     Parse command-line arguments.
@@ -201,9 +187,6 @@ def parse_arguments():
     return args
 
 
-# ──────────────────────────────────────────────────────────────────────────
-# Main Entry Point
-# ──────────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     print("=" * 55)
     print("   Smart Privacy Face Blur System")
