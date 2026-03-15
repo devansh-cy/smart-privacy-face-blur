@@ -11,10 +11,6 @@ import cv2
 import os
 
 
-# ---------------------------------------------------------------------------
-# Load the Haar Cascade XML file shipped with OpenCV
-# ---------------------------------------------------------------------------
-# cv2.data.haarcascades gives the path to OpenCV's built-in cascade folder.
 CASCADE_PATH = os.path.join(
     cv2.data.haarcascades, "haarcascade_frontalface_default.xml"
 )
@@ -45,13 +41,9 @@ def detect_faces(frame):
         Each tuple is (x, y, w, h) representing the bounding box of a
         detected face.  Returns an empty list if no faces are found.
     """
-    # Step 1 – Convert the frame to grayscale (Haar Cascade works on gray)
+
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-    # Step 2 – Run the cascade detector
-    #   scaleFactor  : how much the image size is reduced at each scale
-    #   minNeighbors : higher value = fewer detections but higher quality
-    #   minSize      : minimum face size in pixels
     detections = face_cascade.detectMultiScale(
         gray,
         scaleFactor=1.3,
