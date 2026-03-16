@@ -5,10 +5,6 @@ Smart Privacy Face Blur System – Entry Point
 
 This is the main script that ties everything together.  It supports two
 modes of operation:
-
-
-
-
 Keyboard Controls (during display)
 -----------------------------------
   Q  –  Quit the program
