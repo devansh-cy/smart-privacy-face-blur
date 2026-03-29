@@ -1,4 +1,4 @@
-# 🔒 Smart Privacy Face Blur System
+#  Smart Privacy Face Blur System
 
 A Digital Image Processing project built with **Python** and **OpenCV** that automatically detects human faces in images and live webcam video and applies **Gaussian Blur** or **Pixelation** to protect privacy.
 
@@ -96,7 +96,6 @@ python main.py --mode webcam
 ## 💡 Suggestions to Improve Further
 
 1. **DNN-based detector** – Replace Haar Cascade with OpenCV's DNN face detector (`res10_300x300_ssd_iter_140000.caffemodel`) for better accuracy.
-2. **Adjustable blur strength** – Add `+` / `-` keys to increase or decrease the blur kernel size in real time.
 3. **Video file input** – Add a third mode to process pre-recorded video files (MP4, AVI).
 4. **Selective blurring** – Let the user click on specific faces to blur only those (ignore others).
 5. **Face tracking** – Use OpenCV trackers (KCF, CSRT) to maintain identity across frames and improve speed.
